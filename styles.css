@@ -21,6 +21,7 @@
       padding-top: 0.8rem;
       margin: 0 auto;
       border: 2.7px solid black;
+      background-color: #7d63b9;
       border-radius: 10px;
       height: auto; /* o un valor mayor si es necesario */
       text-align: center;
