@@ -1,0 +1,508 @@
+/*galería que contiene las img con grid*/
+*{
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  body{
+      background: rgb(90,196,180);
+      background: linear-gradient(199deg, rgba(90,196,180,1) 10%, rgba(125,180,198,1) 24%, rgba(79,207,159,1) 34%, rgba(76,203,184,1) 39%, rgba(121,161,155,1) 62%, rgba(226,156,215,1) 79%); 
+      /*#4821a3*/
+      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-family: 'Francois One', sans-serif;
+      font-family: 'Poppins', sans-serif;
+  }
+  
+  .header{
+      width: 80%;
+      height: auto;
+      padding-top: 0.8rem;
+      margin: 0 auto;
+      border: 2.7px solid black;
+      border-radius: 10px;
+      height: auto; /* o un valor mayor si es necesario */
+      text-align: center;
+      color: white;
+      margin-top: 1.2rem;
+      box-shadow: 14px 15px 17px -14px rgb(32, 23, 32)
+  
+  }
+  
+  
+  
+  .cd__logo{
+      width: 55px;
+  }
+  
+  .header h1.titulo{
+      font-size: 16px;
+      margin-left: 2rem auto;
+      margin-right: 2rem auto;
+      font-size: 3.3rem;
+  }
+  .header h1.subtitulo{
+      margin-left: 2rem auto;
+      margin-right: 2rem auto;
+      color: #ec6fe2;
+  }
+  
+  .header h2{
+      color: rgb(117, 200, 255);
+      margin-left: 2rem auto;
+      margin-right: 2rem auto;
+      margin-bottom: 0.7rem;
+  }
+  .header .span1{
+      color: rgb(245, 181, 202)
+  }
+  /*Deseo uno Seccion*/
+  .deseo-uno{
+          width: 60%;
+          padding: 0.6rem;
+          margin: 0 auto;
+          margin-top: 1.3rem;
+          margin-bottom: 1.3rem;
+          background-color: #f19feb;
+          color: rgb(0, 0, 0);
+          font-size: 20px;
+          border: 3px solid black;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          box-shadow: 14px 15px 17px -14px rgb(32, 23, 32)
+      
+  }
+  .deseo-uno-CD-container{
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      width: 4rem;
+      background-color: #7d63b9;
+      border: 3px solid black;
+      box-shadow: 14px 15px 17px -14px rgb(32, 23, 32)
+      
+  }
+  .deseo-uno-CD-disco {
+      width: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0 auto;
+      margin-bottom: 0 auto;
+  }
+  
+  .cd-pinchado:hover{
+      transform: scale(1.15);
+  }
+  
+  .diseños{
+      width: 60%;
+      padding: 0.6rem;
+      margin: 0 auto;
+      margin-top: 1.3rem;
+      margin-bottom: 1.3rem;
+      background-color: #f19feb;
+      color: rgb(0, 0, 0);
+      font-size: 20px;
+      border: 3px solid black;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      box-shadow: 14px 15px 17px -14px rgb(32, 23, 32)
+  }
+  
+  
+  /*------------------------------------------------Lightbox----------------------------------------------------------*/
+  .lightbox{
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.4);
+          backdrop-filter: blur(1rem);
+          position: fixed;
+          top: 0;
+          left: 0;
+  
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+  
+          opacity: 0;
+          pointer-events: none;
+          transition: all .4s ease;
+  }
+  /*Funcionalidad con JS agregando clase isActive */
+  .lightbox.isActive{
+          opacity: 1;
+          pointer-events: auto;
+  }
+  
+  
+  .lightbox .close{
+      width: 3.5rem;
+      color: rgb(255, 255, 255);
+      border-radius: 10px;
+      background-color: #7d63b9;
+      cursor: pointer;
+      transition: all .5s ease;
+  }
+  .lightbox .close:hover{
+      transform: scale(.95);
+  }
+  .lightbox .close:active{
+      transform: scale(1.1);
+  }
+  /*.lightbox .svg*/
+  
+  .lightbox .grande{
+      width: 90%;
+      max-width: 900px;
+      height: 70vh;
+      object-fit: contain;
+  }
+  
+  
+  
+  
+  /*Zona de la galería*/
+  
+  
+  .gallery{
+      margin: 2rem auto;
+      width: 63%;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      column-gap: 1rem;
+      row-gap: 1rem;
+  }
+  
+  /*cada imagen dentro de su div*/
+  .imagen img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4.5px;
+      border: 1.5px solid #000000;
+      box-shadow: 14px 15px 17px -14px rgb(32, 23, 32)
+  } 
+  /* hover img*/ 
+  .imagen img:hover{
+      outline: 2px solid #000000;
+      transform: scale(1.05);
+  }
+  
+  .imagen img:active{
+      transform: scale(1.1);
+  }
+  
+  
+  /*footer*/
+  .contact{
+      width: 60%; 
+      margin: 0 auto;
+      justify-content: center;
+      background-color: #7d63b9;
+      color: white;
+      align-items: center;
+      text-align: center;
+      border: 3px solid black;
+      border-radius: 10px;
+      box-shadow: 14px 15px 17px -14px rgb(32, 23, 32)
+  }
+  
+  .contact h2{
+      width: 40% auto;
+      padding: 1rem;
+      margin:1rem;
+      border: 3px solid black;
+      font-size: 2.2rem;
+      color: #000000;
+      background-color: #b3dee6;
+      border-radius: 10px;
+  }
+  .contact a{
+      color: #000000;
+      margin:1rem;
+      font-size: 1.5rem;
+      text-decoration: none;
+      
+  }
+  .contact a img {
+    vertical-align: middle;
+    margin-right: 10px;
+  
+  }
+  /*footer logos*/
+  .whatsapp-logo{
+      width: 2rem;
+      margin:0.5rem;
+  }
+  .instagram-logo{
+      width: 2rem;
+      margin:0.5rem;
+  }
+  
+  .whatsapp-container-compuest{
+      width: 40%;
+      padding: 0.2rem;
+      margin:1rem auto;
+      border: 3px solid black;
+      font-size: 2.2rem;
+      color: #000000;
+      background-color: #91cfda;
+      border-radius: 10px;
+  }
+  .instagram-container-compuest{
+      width: 40%;
+      padding: 0.2rem;
+      margin:1rem auto;
+      border: 3px solid black;
+      font-size: 2.2rem;
+      color: #000000;
+      background-color: #91cfda;
+      border-radius: 10px;
+  }
+  
+  .instagram-container-compuest:hover, .whatsapp-container-compuest:hover{
+      background-color: #f19feb;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /*--------------------------------------------------Media queries--------------------------------------*/
+  
+  /*celular*/
+  @media (min-width:100px){
+      .gallery{
+          grid-template-columns: repeat(2, 1fr);
+          width: 80%;
+  
+      }
+      .header{
+          width: 80%;
+          
+      }
+      .cd__logo{
+          width: 42px;
+      }
+      .header h1.titulo{
+          margin-left: 1rem auto;
+          margin-right: 1rem auto;
+          font-size: 2.3rem;
+      }
+      .header h1.subtitulo{
+          margin-left: 2rem auto;
+          margin-right: 2rem auto;
+          color: #f8a6ea;
+          font-size: 1.5rem;
+      }
+      
+      .header h2{
+          color: rgb(117, 200, 255);
+          margin-left: 2rem auto;
+          margin-right: 2rem auto;
+          margin-bottom: 0.7rem;
+          font-size: 1.25rem;
+      }
+      .diseños{
+          display: flex;
+          text-align: center;
+      }
+  
+      .imagen{
+          width: 100%;
+      }
+  
+      .contact{
+          width: 96%;
+          margin:0.5rem auto;
+          }
+      .contact h2{
+              width: 40% auto;
+              padding: 0.1rem;
+  
+      }
+      .whatsapp-container-compuest{
+          width: 72%;
+          margin:0.5rem auto;
+          padding: 0.1rem;
+      }
+      .instagram-container-compuest{
+          width: 72%;
+          margin:0.5rem auto;
+          padding: 0.1rem;
+      }
+  }
+  
+  /*tablet*/
+  @media (min-width:520px){
+      .gallery{
+           grid-template-columns: repeat(3, 1fr);
+           width: 80%;
+      }
+  
+  
+      .header{
+          width: 80%;
+          min-height: 250px;
+          padding-top: 0.8rem;
+          margin: 0 auto;
+          border: 3px solid black;
+          border-radius: 10px;
+          height: auto; /* o un valor mayor si es necesario */
+          text-align: center;
+          background-color: #4821a3;
+          color: white;
+          margin-top: 1.2rem;
+      
+      }
+      
+      /*textos y titulos*/
+      .cd__logo{
+          width: 55px;
+      }
+      
+      .header h1.titulo{
+          font-size: 16px;
+          margin-left: 2rem auto;
+          margin-right: 2rem auto;
+          font-size: 3.3rem;
+      }
+      .header h1.subtitulo{
+          margin-left: 2rem auto;
+          margin-right: 2rem auto;
+          color: #f19feb;
+      }
+      
+      .header h2{
+          color: rgb(117, 200, 255);
+          margin-left: 2rem auto;
+          margin-right: 2rem auto;
+          margin-bottom: 0.7rem;
+      }
+      .contact{
+          width: 70%;
+          }
+      .whatsapp-container-compuest{
+          width: 35%;
+      }
+      .instagram-container-compuest{
+          width: 35%;
+      }
+  }
+  /*laptop*/
+  @media (min-width:728px){
+      .gallery{
+          grid-template-columns: repeat(4, 1fr);
+          width: 80%;
+          
+      }
+      .header{
+          width: 80%;
+          min-height: 250px;
+          padding-top: 0.8rem;
+          margin: 0 auto;
+          border: 3px solid black;
+          border-radius: 10px;
+          height: auto; /* o un valor mayor si es necesario */
+          text-align: center;
+          background-color: #4821a3;
+          color: white;
+          margin-top: 1.2rem;
+      
+      }
+      
+      /*textos y titulos*/
+      .cd__logo{
+          width: 55px;
+      }
+      
+      .header h1.titulo{
+          font-size: 16px;
+          margin-left: 2rem auto;
+          margin-right: 2rem auto;
+          font-size: 3.3rem;
+      }
+      .header h1.subtitulo{
+          margin-left: 2rem auto;
+          margin-right: 2rem auto;
+          color: #f19feb;
+      }
+      
+      .header h2{
+          color: rgb(117, 200, 255);
+          margin-left: 2rem auto;
+          margin-right: 2rem auto;
+          margin-bottom: 0.7rem;
+      }
+  
+      .whatsapp-container-compuest{
+          width: 45%;
+      }
+      .instagram-container-compuest{
+          width: 45%;
+      }
+  }
+  /*pc*/
+  @media (min-width:1024px){
+      .gallery{
+          grid-template-columns: repeat(6, 1fr);
+          width: 80%;
+      }
+      .header{
+          width: 80%;
+          min-height: 250px;
+          padding-top: 0.8rem;
+          margin: 0 auto;
+          border: 3px solid black;
+          border-radius: 10px;
+          height: auto; /* o un valor mayor si es necesario */
+          text-align: center;
+          background-color: #4821a3;
+          color: white;
+          margin-top: 1.2rem;
+      
+      }
+      
+      /*textos y titulos*/
+      .cd__logo{
+          width: 55px;
+      }
+      
+      .header h1.titulo{
+          font-size: 16px;
+          margin-left: 2rem auto;
+          margin-right: 2rem auto;
+          font-size: 3.3rem;
+      }
+      .header h1.subtitulo{
+          margin-left: 2rem auto;
+          margin-right: 2rem auto;
+          color: #f19feb;
+      }
+      
+      .header h2{
+          color: rgb(117, 200, 255);
+          margin-left: 2rem auto;
+          margin-right: 2rem auto;
+          margin-bottom: 0.7rem;
+      }
+  
+  }
